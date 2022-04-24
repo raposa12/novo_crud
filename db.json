@@ -1,0 +1,22 @@
+{
+  "pessoas": [
+    {
+      "idade": "25",
+      "nome": "Erickso Raúl Zango",
+      "email": "erickson@udemy.com",
+      "id": 2
+    },
+    {
+      "idade": "26",
+      "nome": "prata",
+      "email": "prata@gmail.com",
+      "id": "3"
+    },
+    {
+      "idade": "26",
+      "nome": "nelson",
+      "email": "prata@gmail.com",
+      "id": "4"
+    }
+  ]
+}

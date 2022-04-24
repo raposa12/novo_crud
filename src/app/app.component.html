@@ -1,0 +1,46 @@
+<div class="container">
+    <table class="table table-strip custab">
+      <thead>
+        <button (click)="adicionarPessoa()" class="btn btn-primary btn-xs pull-left">Adicionar pessoas</button>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Idade</th>
+          <th class="text-center">Ação</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let pessoa of pessoaLista">
+        <td>{{pessoa.id}}</td>
+        <td>{{pessoa.nome}}</td>
+        <td>{{ pessoa.email }}</td>
+        <td>{{ pessoa.idade }}</td>
+        <td class="text-center"><button (click)="editarFormualrio(pessoa)" class="text-white bg-primary btn btn-info btn-xs">Editar</button></td>
+        <br><br><br>
+        <td class="text-center"><button (click)="deletarPessoa(pessoa.id)" class="text-white bg-danger btn btn-danger btn-xs">Remover</button></td>
+      </tr>
+    </table>
+    <!--Campo de formulario de adicinar pessoas escondido -->
+    <div *ngIf="mostrarFormulario">
+      <h3>Adicionar pessoas</h3>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="id" placeholder="Id">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="idade" placeholder="Idade">
+      </div>
+      <br>
+      <div class="form-group">
+        <input class="btn btn-success" value="salvar" (click)="salvar()">
+      </div>
+    </div>
+</div>
